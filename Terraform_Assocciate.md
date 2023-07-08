@@ -13,7 +13,7 @@ after deleting the specific resource if you again do tf init it will again creat
 
 also you can delete the specific resource by commenting the resource block and run `terraform plan`
 
-#Terraform statefile
+**Terraform statefile**
 
 Terraform stores state of the infra we create in statefile
 

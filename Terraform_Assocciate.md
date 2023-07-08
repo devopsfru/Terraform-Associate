@@ -68,4 +68,15 @@ this could lead to compatibility issues so we do specify versions as mentined ab
 | Less than equals   | <=1.0         |
 | Any version in 2.x | ~>2.0         |
 | Any version b/w    | >=2.10,<=2.30 |
+| exact              | =2.10         |
 
+The details of this provider version you can find in `terraform.lock.hcl` file
+you will gate provider registry, currene version and constraint details.
+
+this lock file will help not to conflict with versions if you change the version in the tf directly.
+
+you have to delte the lock file to avoid the conficlt, (not recommended in prod)
+
+**upgrade**
+
+we can override if we want to switch to updated version then change the version in tf fle and run `terraform init -upgrade`

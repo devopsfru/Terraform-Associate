@@ -62,7 +62,10 @@ this could lead to compatibility issues so we do specify versions as mentined ab
 
 **Example arguments:**
 
-Greate than equal - >=1.0
-Less than equals  - <=1.0
-Any version in 2.x- ~>2.0
-Any version b/w   - >=2.10,<=2.30
+| Logic              | operator      |
+| ------------------ | ------------- |
+| Greate than equal  | >=1.0         |
+| Less than equals   | <=1.0         |
+| Any version in 2.x | ~>2.0         |
+| Any version b/w    | >=2.10,<=2.30 |
+

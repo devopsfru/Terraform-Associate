@@ -46,6 +46,7 @@ if you dont specify the Provider version it takes most recent/latest version of 
 we specify provider version under `terraform` and `required_providers` block
 
 **Example:**
+
 ```bash
 terraform {
     required_provders{
@@ -57,4 +58,11 @@ terraform {
 }
 ```
 
-this could lead to compatibility issues, 
+this could lead to compatibility issues so we do specify versions as mentined above
+
+**Example arguments:**
+
+Greate than equal - >=1.0
+Less than equals  - <=1.0
+Any version in 2.x- ~>2.0
+Any version b/w   - >=2.10,<=2.30

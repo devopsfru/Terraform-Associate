@@ -29,3 +29,32 @@ Current state is the state of the resource at the cloud provider ex: in the Azur
 
 
 its always imp to match desired state to current. if not when you tun `tf plan` will inform you what actions need to take to make it equal to desired state.
+
+
+Note:
+When you create new resources like nsg and update vm with new nsg for the vm then after doing `terraform refresh` and `terraform plan` it gets the state but it wont create any thing since resource already exist.
+
+
+because we never discribe a nsg group details in tf config file so it doesnt manage its state.
+
+## Provider versioning
+
+Terraform will have one version and Provider will have another.
+
+if you dont specify the Provider version it takes most recent/latest version of that provider(aws/azure/gcp..)
+
+we specify provider version under `terraform` and `required_providers` block
+
+**Example:**
+```bash
+terraform {
+    required_provders{
+        aws = {
+            source = "hashicorp/aws"
+            version = "~> 3.0"
+        }
+    }
+}
+```
+
+this could lead to compatibility issues, 
